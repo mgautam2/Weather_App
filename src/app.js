@@ -11,6 +11,8 @@ const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
 
+const port = process.env.PORT || 3000;
+
 // Setup handlebars engine and views location
 
 app.set('view engine', 'hbs')
@@ -23,14 +25,14 @@ app.use(express.static(publicDirectoryPath))
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather',
-        name: 'Andrew Mead'
+        name: 'mrinal Gautam'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Me',
-        name: 'Andrew Mead'
+        name: 'mrinal Gautam'
     })
 })
 
@@ -97,6 +99,7 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server is up on port 3000.')
 })
+
