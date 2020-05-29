@@ -24,7 +24,7 @@ weatherForm.addEventListener('submit', (e) => {
       .then((data) => {
             if (data.error) {
                 console.log(data.error)
-                message1.textContent = 'Boshdike Bhag Yaya sai !!!'
+                message1.textContent = 'Wrong Input. Try Again!'
                 message2.textContent = ''
             } else {
                 console.log(data.location)
